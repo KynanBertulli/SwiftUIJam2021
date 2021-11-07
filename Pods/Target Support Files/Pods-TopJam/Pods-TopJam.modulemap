@@ -1,0 +1,6 @@
+framework module Pods_TopJam {
+  umbrella header "Pods-TopJam-umbrella.h"
+
+  export *
+  module * { export * }
+}

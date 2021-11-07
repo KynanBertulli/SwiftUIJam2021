@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ListDataStore" representedClassName="ListDataStore" syncable="YES">
+        <attribute name="added_at" optional="YES" attributeType="String"/>
+        <attribute name="added_by" optional="YES" attributeType="String"/>
+        <attribute name="album_artistName" optional="YES" attributeType="String"/>
+        <attribute name="album_artists_uri" optional="YES" attributeType="String"/>
+        <attribute name="albumName" optional="YES" attributeType="String"/>
+        <attribute name="artistName" optional="YES" attributeType="String"/>
+        <attribute name="artists_uri" optional="YES" attributeType="String"/>
+        <attribute name="discNum" optional="YES" attributeType="String"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="explicit" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="pop_rating" optional="YES" attributeType="String"/>
+        <attribute name="preview_url" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="track_uri" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackNum" optional="YES" attributeType="String"/>
+        <fetchedProperty name="fetchedProperty" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="ListDataStore"/>
+        </fetchedProperty>
+    </entity>
+    <elements>
+        <element name="ListDataStore" positionX="-63" positionY="-18" width="128" height="305"/>
+    </elements>
+</model>

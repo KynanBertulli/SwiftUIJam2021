@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B36457AE92CEDE031B5C5EB /* Pods_TopJam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7659340C948C9C8667E14A1 /* Pods_TopJam.framework */; };
+		DE166C302735A9E100023712 /* TopJamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE166C2F2735A9E100023712 /* TopJamApp.swift */; };
+		DE166C322735A9E100023712 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE166C312735A9E100023712 /* ContentView.swift */; };
+		DE166C342735A9E400023712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE166C332735A9E400023712 /* Assets.xcassets */; };
+		DE166C372735A9E400023712 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE166C362735A9E400023712 /* Preview Assets.xcassets */; };
+		DE166C392735A9E400023712 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE166C382735A9E400023712 /* Persistence.swift */; };
+		DE166C3C2735A9E400023712 /* TopJam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE166C3A2735A9E400023712 /* TopJam.xcdatamodeld */; };
+		DE166C432735AE6000023712 /* ListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE166C422735AE6000023712 /* ListData.swift */; };
+		DE3D633127388AC600DE401A /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3D633027388AC600DE401A /* FilteredList.swift */; };
+		DE6121DB2737877200797981 /* ListDataStore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6121DA2737877200797981 /* ListDataStore+CoreDataClass.swift */; };
+		DE6121DC2737877200797981 /* ListDataStore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6121D92737877200797981 /* ListDataStore+CoreDataProperties.swift */; };
+		DE61220B2737B31200797981 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61220A2737B31200797981 /* LoadingScreen.swift */; };
+		DE8BEFCD27364B23003038CC /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BEFCC27364B23003038CC /* ListItem.swift */; };
+		DE8BEFCF27364C51003038CC /* dummy-data.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8BEFCE27364C51003038CC /* dummy-data.json */; };
+		DE8BEFD127364CBA003038CC /* Bundle-decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BEFD027364CBA003038CC /* Bundle-decodable.swift */; };
+		DEF1CA1D2737180E00E2B414 /* ColorArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1CA1C2737180E00E2B414 /* ColorArray.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8E5720C760BF71DDF5B51B14 /* Pods-TopJam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopJam.debug.xcconfig"; path = "Target Support Files/Pods-TopJam/Pods-TopJam.debug.xcconfig"; sourceTree = "<group>"; };
+		BB90A77F9DA1BA638B73ACB3 /* Pods-TopJam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopJam.release.xcconfig"; path = "Target Support Files/Pods-TopJam/Pods-TopJam.release.xcconfig"; sourceTree = "<group>"; };
+		DE166C2C2735A9E100023712 /* TopJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE166C2F2735A9E100023712 /* TopJamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopJamApp.swift; sourceTree = "<group>"; };
+		DE166C312735A9E100023712 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE166C332735A9E400023712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE166C362735A9E400023712 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE166C382735A9E400023712 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		DE166C3B2735A9E400023712 /* TopJam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TopJam.xcdatamodel; sourceTree = "<group>"; };
+		DE166C422735AE6000023712 /* ListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListData.swift; sourceTree = "<group>"; };
+		DE3D633027388AC600DE401A /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		DE6121D92737877200797981 /* ListDataStore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ListDataStore+CoreDataProperties.swift"; path = "/Users/kynanbertulli/coding workspace/100-DaysOfSwift/100-Days-of-Swift/TopJam/TopJam/ListDataStore+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		DE6121DA2737877200797981 /* ListDataStore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ListDataStore+CoreDataClass.swift"; path = "/Users/kynanbertulli/coding workspace/100-DaysOfSwift/100-Days-of-Swift/TopJam/TopJam/ListDataStore+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		DE61220A2737B31200797981 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		DE8BEFCC27364B23003038CC /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		DE8BEFCE27364C51003038CC /* dummy-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dummy-data.json"; sourceTree = "<group>"; };
+		DE8BEFD027364CBA003038CC /* Bundle-decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-decodable.swift"; sourceTree = "<group>"; };
+		DEF1CA1C2737180E00E2B414 /* ColorArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorArray.swift; sourceTree = "<group>"; };
+		F7659340C948C9C8667E14A1 /* Pods_TopJam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopJam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE166C292735A9E100023712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B36457AE92CEDE031B5C5EB /* Pods_TopJam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B54FB0BDB0C02AB8B8F694E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7659340C948C9C8667E14A1 /* Pods_TopJam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E2CFC2164AB4644EC35659A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E5720C760BF71DDF5B51B14 /* Pods-TopJam.debug.xcconfig */,
+				BB90A77F9DA1BA638B73ACB3 /* Pods-TopJam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE166C232735A9E100023712 = {
+			isa = PBXGroup;
+			children = (
+				DE166C2E2735A9E100023712 /* TopJam */,
+				DE166C2D2735A9E100023712 /* Products */,
+				8E2CFC2164AB4644EC35659A /* Pods */,
+				4B54FB0BDB0C02AB8B8F694E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE166C2D2735A9E100023712 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE166C2C2735A9E100023712 /* TopJam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE166C2E2735A9E100023712 /* TopJam */ = {
+			isa = PBXGroup;
+			children = (
+				DE6121DA2737877200797981 /* ListDataStore+CoreDataClass.swift */,
+				DE6121D92737877200797981 /* ListDataStore+CoreDataProperties.swift */,
+				DE166C2F2735A9E100023712 /* TopJamApp.swift */,
+				DE166C422735AE6000023712 /* ListData.swift */,
+				DE166C312735A9E100023712 /* ContentView.swift */,
+				DE61220A2737B31200797981 /* LoadingScreen.swift */,
+				DE8BEFCC27364B23003038CC /* ListItem.swift */,
+				DE166C332735A9E400023712 /* Assets.xcassets */,
+				DE8BEFCE27364C51003038CC /* dummy-data.json */,
+				DE166C382735A9E400023712 /* Persistence.swift */,
+				DE166C3A2735A9E400023712 /* TopJam.xcdatamodeld */,
+				DE166C352735A9E400023712 /* Preview Content */,
+				DE8BEFD027364CBA003038CC /* Bundle-decodable.swift */,
+				DEF1CA1C2737180E00E2B414 /* ColorArray.swift */,
+				DE3D633027388AC600DE401A /* FilteredList.swift */,
+			);
+			path = TopJam;
+			sourceTree = "<group>";
+		};
+		DE166C352735A9E400023712 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE166C362735A9E400023712 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE166C2B2735A9E100023712 /* TopJam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE166C3F2735A9E400023712 /* Build configuration list for PBXNativeTarget "TopJam" */;
+			buildPhases = (
+				F42BBA6064E33D9361B731A7 /* [CP] Check Pods Manifest.lock */,
+				DE166C282735A9E100023712 /* Sources */,
+				DE166C292735A9E100023712 /* Frameworks */,
+				DE166C2A2735A9E100023712 /* Resources */,
+				A939E6B474BEF056E0DABF12 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopJam;
+			productName = TopJam;
+			productReference = DE166C2C2735A9E100023712 /* TopJam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE166C242735A9E100023712 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					DE166C2B2735A9E100023712 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = DE166C272735A9E100023712 /* Build configuration list for PBXProject "TopJam" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE166C232735A9E100023712;
+			productRefGroup = DE166C2D2735A9E100023712 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE166C2B2735A9E100023712 /* TopJam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE166C2A2735A9E100023712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE166C372735A9E400023712 /* Preview Assets.xcassets in Resources */,
+				DE166C342735A9E400023712 /* Assets.xcassets in Resources */,
+				DE8BEFCF27364C51003038CC /* dummy-data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A939E6B474BEF056E0DABF12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopJam/Pods-TopJam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopJam/Pods-TopJam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopJam/Pods-TopJam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42BBA6064E33D9361B731A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TopJam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE166C282735A9E100023712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8BEFD127364CBA003038CC /* Bundle-decodable.swift in Sources */,
+				DE61220B2737B31200797981 /* LoadingScreen.swift in Sources */,
+				DEF1CA1D2737180E00E2B414 /* ColorArray.swift in Sources */,
+				DE8BEFCD27364B23003038CC /* ListItem.swift in Sources */,
+				DE6121DC2737877200797981 /* ListDataStore+CoreDataProperties.swift in Sources */,
+				DE166C392735A9E400023712 /* Persistence.swift in Sources */,
+				DE166C322735A9E100023712 /* ContentView.swift in Sources */,
+				DE166C3C2735A9E400023712 /* TopJam.xcdatamodeld in Sources */,
+				DE3D633127388AC600DE401A /* FilteredList.swift in Sources */,
+				DE6121DB2737877200797981 /* ListDataStore+CoreDataClass.swift in Sources */,
+				DE166C302735A9E100023712 /* TopJamApp.swift in Sources */,
+				DE166C432735AE6000023712 /* ListData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DE166C3D2735A9E400023712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE166C3E2735A9E400023712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE166C402735A9E400023712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5720C760BF71DDF5B51B14 /* Pods-TopJam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TopJam/Preview Content\"";
+				DEVELOPMENT_TEAM = SNCZAMQFM3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kynan.bertulli.TopJam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE166C412735A9E400023712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB90A77F9DA1BA638B73ACB3 /* Pods-TopJam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TopJam/Preview Content\"";
+				DEVELOPMENT_TEAM = SNCZAMQFM3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kynan.bertulli.TopJam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE166C272735A9E100023712 /* Build configuration list for PBXProject "TopJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE166C3D2735A9E400023712 /* Debug */,
+				DE166C3E2735A9E400023712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE166C3F2735A9E400023712 /* Build configuration list for PBXNativeTarget "TopJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE166C402735A9E400023712 /* Debug */,
+				DE166C412735A9E400023712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE166C3A2735A9E400023712 /* TopJam.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE166C3B2735A9E400023712 /* TopJam.xcdatamodel */,
+			);
+			currentVersion = DE166C3B2735A9E400023712 /* TopJam.xcdatamodel */;
+			path = TopJam.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DE166C242735A9E100023712 /* Project object */;
+}

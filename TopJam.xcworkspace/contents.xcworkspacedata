@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/kynanbertulli/coding workspace/100-DaysOfSwift/100-Days-of-Swift/TopJam/TopJam/ListDataStore+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/kynanbertulli/coding workspace/100-DaysOfSwift/100-Days-of-Swift/TopJam/TopJam/ListDataStore+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:TopJam.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
