@@ -31,13 +31,15 @@ struct ContentView: View {
     @FetchRequest(entity: ListDataStore.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ListDataStore.trackName, ascending: true)], predicate: NSPredicate(format: "trackName > %@", "A")) var results2: FetchedResults<ListDataStore>
     //rating sort
     @FetchRequest(entity: ListDataStore.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ListDataStore.pop_rating, ascending: false)], predicate: NSPredicate(format: "pop_rating > %@", "0")) var results: FetchedResults<ListDataStore>
-    @State private var searchEntry: String = ""
+    @State private var searchEntry: String = "S"
     
     
     
     //    filter list based off search sort
-    var fetchRequest2: FetchRequest<ListDataStore>
-    
+    @FetchRequest(entity: ListDataStore.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ListDataStore.trackName, ascending: true)]) var items: FetchedResults<ListDataStore>
+//    var fetchRequest2: FetchRequest<ListDataStore>
+
+
     
     @State private var isExpanded: Bool = false
     @State private var sortOrderToggle = false
@@ -46,14 +48,24 @@ struct ContentView: View {
     
     
     @State private var searchToggled = false
+    @State private var searchYOffset: CGFloat = -25
     @State private var data: [ListData] = [ListData]()
     
     @State private var loadedData = false
     //color of items
     @State private var newColor = colorArray[Int.random(in: 0..<colorArray.count)]
     
+    var filteredItems: [ListDataStore]{
+        if(searchEntry != ""){
+            return items.filter({$0.wrappedTrackName.contains(searchEntry)})
+        }
+//        else{
+//            return items.sorted(by: {$0.index < $1.index})
+//        }
+        return [ListDataStore]()
+    }
     var body: some View {
-        if(loadedData){
+        if(!data.isEmpty){
             GeometryReader { g in
                 NavigationView {
                     ScrollView {
@@ -125,14 +137,15 @@ struct ContentView: View {
                                         .foregroundColor(.white)
                                 }
                             }.padding().ignoresSafeArea()
-                            if(searchToggled){
-                                TextField("search", text: $searchEntry)
-                                    .padding(20)
-                                    .frame(height: 50)
-                                    .background(Color.white)
-                                    .padding(.leading, 30)
-                                    .padding(.trailing, 30)
-                            }
+//                            if(searchToggled){
+//                                TextField("search", text: $searchEntry)
+//                                    .padding(20)
+//                                    .frame(height: 50)
+//                                    .background(Color.white)
+//                                    .padding(.leading, 30)
+//                                    .padding(.trailing, 30)
+//                                    .offset(y: CGFloat(searchYOffset))
+//                            }
                         }
                         VStack {
                             if(!searchToggled){
@@ -144,17 +157,24 @@ struct ContentView: View {
                                 }
                             }
                             else{
+                                TextField("search", text: $searchEntry)
+                                    .padding(20)
+                                    .frame(height: 50)
+                                    .background(Color.white)
+                                    .padding(.leading, 30)
+                                    .padding(.trailing, 30)
+                                    .offset(y: CGFloat(searchYOffset))
                                 Text(" TEST TEST TEST")
                                     .foregroundColor(.white)
-                                FilteredList(filterKey: "trackName", filterValue: "S") { (singer: ListDataStore) in
-                                    Text("\(singer.wrappedTrackName)")
-                                        .foregroundColor(.white)
-//
-//                                    ListItem(post: singer)
-//                                        .background(colorArray[Int.random(in: 0..<colorArray.count)])
-//                                        .animation(.easeInOut, value: colorArray[Int.random(in: 0..<colorArray.count)])
-
+//                                FilteredList(filter: searchEntry)
+                                ForEach(filteredItems, id:\.self){ item in
+//                                    Text("name \(item)")
+//                                        .foregroundColor(.white)
+                                    ListItem(post: item)
+                                        .background(colorArray[Int.random(in: 0..<colorArray.count)])
+                                        .animation(.easeInOut, value: colorArray[Int.random(in: 0..<colorArray.count)])
                                 }
+                            
                             }
                         }
 
@@ -171,15 +191,6 @@ struct ContentView: View {
                 LoadingScreen().onAppear(perform: loadData)
                 
             }
-            
-            
-        }
-    init(filter: String){
-            //        self.data = [ListData]()
-            //        data = Bundle.main.decode("dummy-data.json")
-            print("data")
-            
-            fetchRequest2 = FetchRequest<ListDataStore>(entity: ListDataStore.entity(), sortDescriptors: [], predicate: NSPredicate(format: "trackName BEGINSWITH %@", filter))
             
             
         }
@@ -264,18 +275,19 @@ struct ContentView: View {
         }
         
     func createSearch(){
-            withAnimation(.default){
+            withAnimation(.easeInOut){
+                searchYOffset = 0
                 searchToggled.toggle()
+                
             }
             //    filter = searchEntry
             listResults = [ListDataStore]()
-//            fetchRequest2 = FetchRequest<ListDataStore>(entity: ListDataStore.entity(), sortDescriptors: [], predicate: NSPredicate(format: "trackName BEGINSWITH %@", filter))
 //            for i in 0..<fetchRequest2.wrappedValue.count{
 //                let item = fetchRequest2.wrappedValue[i]
 //                listResults.append(item)
 //
 //            }
-        print()
+        print("creating search")
             
         }
         
@@ -285,7 +297,8 @@ struct ContentView: View {
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView(filter: "S").environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//        filter: "S"
+            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
     

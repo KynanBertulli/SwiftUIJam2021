@@ -14,7 +14,7 @@ struct TopJamApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(filter: "S")
+            ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

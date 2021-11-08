@@ -5,24 +5,34 @@
 import CoreData
 import SwiftUI
 
-struct FilteredList<T: NSManagedObject, Content: View>: View {
-    var fetchRequest: FetchRequest<T>
-    var singers: FetchedResults<T> { fetchRequest.wrappedValue }
-
-    // this is our content closure; we'll call this once for each item in the list
-    let content: (T) -> Content
-
-    var body: some View {
-        List(fetchRequest.wrappedValue, id: \.self) { singer in
-            self.content(singer)
+struct FilteredList: View{
+    init(filter: String) {
+        print("test test test")
+        
+        fetchRequest2 = FetchRequest<ListDataStore>(entity: ListDataStore.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ListDataStore.trackName, ascending: false)])
+//        , predicate: NSPredicate(format: "trackName BEGINSWITH %@", filter)
+        
+        print(singers.count)
+        for i in 0..<fetchRequest2.wrappedValue.count{
+            print(fetchRequest2.wrappedValue[i].wrappedTrackName)
         }
     }
+    
+    var fetchRequest2: FetchRequest<ListDataStore>
+//    var singers: FetchedResults<ListDataStore> { fetchRequest2.wrappedValue }
+    @State private var singers: [ListDataStore] = [ListDataStore]()
 
-    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        print("test test test")
-        fetchRequest = FetchRequest<T>(entity: ListDataStore.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH [c] %@", filterKey, filterValue))
-        print(fetchRequest.wrappedValue)
-        self.content = content
+    // this is our content closure; we'll call this once for each item in the list
+    // let content: (T) -> Content
+    
+    var body: some View {
+        List(singers, id: \.self) { singer in
+            Text(singer.wrappedTrackName)
+                .foregroundColor(.white)
+        }
+        
     }
+
+   
 }
 
