@@ -35,7 +35,7 @@ struct ListItem: View{
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                         Spacer()
-                        Text("#\(post.pop_rating ?? "")")
+                        Text("#\(100 - (Int(post.pop_rating ?? "") ?? 1) + 1 )")
                             .multilineTextAlignment(.trailing)
                             .font(.largeTitle.bold())
                         
