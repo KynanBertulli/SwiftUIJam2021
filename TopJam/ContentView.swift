@@ -31,6 +31,8 @@ struct ContentView: View {
     @FetchRequest(entity: ListDataStore.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ListDataStore.trackName, ascending: true)], predicate: NSPredicate(format: "trackName > %@", "A")) var results2: FetchedResults<ListDataStore>
     //rating sort
     @FetchRequest(entity: ListDataStore.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ListDataStore.pop_rating, ascending: false)], predicate: NSPredicate(format: "pop_rating > %@", "0")) var results: FetchedResults<ListDataStore>
+
+//    @FetchRequest(entity: ListDataStore.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ListDataStore.pop_rating, ascending: true)], predicate: NSPredicate(format: "pop_rating.doubleValue > %i", 0 )) var results: FetchedResults<ListDataStore>
     @State private var searchEntry: String = "S"
     
     
@@ -65,7 +67,7 @@ struct ContentView: View {
         return [ListDataStore]()
     }
     var body: some View {
-        if(!data.isEmpty){
+//        if(!listResults.isEmpty){
             GeometryReader { g in
                 NavigationView {
                     ScrollView {
@@ -164,7 +166,7 @@ struct ContentView: View {
                                     .padding(.leading, 30)
                                     .padding(.trailing, 30)
                                     .offset(y: CGFloat(searchYOffset))
-                                Text(" TEST TEST TEST")
+                                Text("TEST TEST TEST")
                                     .foregroundColor(.white)
 //                                FilteredList(filter: searchEntry)
                                 ForEach(filteredItems, id:\.self){ item in
@@ -182,15 +184,15 @@ struct ContentView: View {
                         }
                         .frame(width: g.size.width, height: g.size.height)
                         .background(Color.black)
-                        
+                        .onAppear(perform: loadData)
                         .navigationBarHidden(true)
                     }
                 }
-            }
-            else{
-                LoadingScreen().onAppear(perform: loadData)
-                
-            }
+//            }
+//            else{
+//                LoadingScreen().onAppear(perform: loadData)
+//
+//            }
             
             
         }
@@ -208,7 +210,7 @@ struct ContentView: View {
         }
         func loadData(){
             print("test 1")
-            if(results.count < 100){
+            if(!results.isEmpty){
                 print("test 2")
                 data = Bundle.main.decode("dummy-data.json")
                 PersistenceController.shared.container.performBackgroundTask { moc in
@@ -237,14 +239,14 @@ struct ContentView: View {
                     }
                 }
                 // add to state var
-                
+                for i in 0..<results.count{
+                    let item = results[i]
+                    listResults.append(item)
+                    
+                }
                 
             }
-            for i in 0..<results.count{
-                let item = results[i]
-                listResults.append(item)
-                
-            }
+            
             
             
             print(results.count)
